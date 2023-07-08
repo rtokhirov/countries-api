@@ -9,5 +9,6 @@ app.use(express.json())
 
 app.use('/api/',countryRouter)
 
-app.listen(8080,()=>console.log('server started'))
+const port =process.env.PORT||8080
+app.listen(port,()=>console.log('server started'))
 countriesStart()
